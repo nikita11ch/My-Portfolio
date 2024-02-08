@@ -50,9 +50,9 @@ section{
     border-radius: 50px;
     transition: all .42 ease-in-out;
     padding: 10px 27px;
-    background-color: transparent;
+    background-color:#FD4766;
     border: 2px solid #c6c9d8bf;
-    color: #c6c9d8bf;
+    color: #fcfcff;
     font-weight: 500;
     font-size: 14px;
     text-transform: uppercase;
@@ -61,9 +61,9 @@ section{
     
 }
 .main-btn:hover{
-    background-color: #FD4766;
+    background-color: #e7dcde;
     border-color:#FD4766;
-    color: #fff;
+    color: #050505;
 }
 
 h1{
@@ -190,7 +190,7 @@ button{
 }
 .header_wrapper .menu-navbar-nav{
     text-align: center;
-    background-color:#091020 ;
+    background-color:#020202 ;
     padding-bottom: 15px;
 }
 .header_wrapper .nav-item .nav-link{
@@ -201,7 +201,7 @@ button{
     width: 100%;
     height: auto;
     min-height: 650px;
-    background-image: url(b.jpg);    
+    background-image: url(Background_img.png);    
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
