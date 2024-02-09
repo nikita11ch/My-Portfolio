@@ -14,6 +14,44 @@
   </head>
 <body data-bs-spy="scroll"  data-bs-target=".navbar" data-bs-offset="75">
 <!-- navbar -->
+<div class="cursor"></div>
+<script type="text/javascript">
+      const cursor = document.querySelector(".cursor");
+      const animatedCursor = document.querySelector(".cursor::before");
+
+  var timeout;
+
+  document.addEventListener("mousemove",(e) => {
+    let x = e.clientX;
+    let y = e.clientY;
+
+    cursor.style.top = y + "px";
+    cursor.style.left = x + "px";
+    cursor.style.display="block";
+
+    animatedCursor.style.top = cursor.style.top;
+  animatedCursor.style.left = cursor.style.left;
+
+    function mouseStopped(){
+      cursor.style.display="none";
+    }
+    clearTimeout(timeout);
+    timeout = setTimeout(mouseStopped,1000);
+  });
+
+    document.addEventListener("mouseout", () => {
+      cursor.style.display= "none";
+      animatedCursor.style.display = "none";
+
+    });
+    setInterval(() => {
+    animatedCursor.style.top = cursor.style.top;
+    animatedCursor.style.left = cursor.style.left;
+  }, 50);
+
+</script>
+
+
 <header class="header_wrapper">
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
@@ -76,7 +114,7 @@
           <span class="subtitle">Know Who I Am</span>
           <h1>About Me</h1>
           <p>
-            "Hi Everyone, I am Nikita Chaurasia from Maharashtra, India. I am currently learning Java. I have completed B.Tech in Electronics & Telecommunication Engineering. My portfolio is a showcase of my coding journey and commitment to continuous learning. Excited to share my passion for development with you. Let's connect and explore together!"
+            "Hi Everyone, I am Nikita Chaurasia from Maharashtra, India. I have completed B.Tech in Electronics & Telecommunication Engineering. I am currently learning Java. My portfolio is a showcase of my coding journey and commitment to continuous learning. I am excited to share my passion for development with you. Let's connect and explore together!"
           </p>
         </div>
       </div>
@@ -124,7 +162,7 @@
       <button type="button" class="btn btn-outline-primary"><a href="https://nikita11ch.github.io/AMAZON-CLONE-SHOP-SIMPLICITY/">Amazon Clone</a></button>
 <button type="button" class="btn btn-outline-success"><a href="https://nikita11ch.github.io/EMPLOYEE-MANAGEMENT-SYSTEM/">Employee Management System</a></button>
 <button type="button" class="btn btn-outline-danger">Doctor's Word</button>
-<button type="button" class="btn btn-outline-warning">Warning</button>
+<button type="button" class="btn btn-outline-warning"><a href="https://nikita11ch.github.io/Tic-Tac-Toe-Game/">Tic-Tac-Toe-Game</a></button>
       </div>
     </div>
   </div>
@@ -147,13 +185,13 @@
       </div>
       <form action="" name="contactform">
         <div class="mb-4">
-          <input type="text" name="Name" class="form-control" placeholder="Your Name..." autocomplete="off">
+          <input type="text" name="Name" class="form-control" placeholder="E.g. Nikita Chaurasia" autocomplete="off">
         </div>
         <div class="mb-4">
-          <input type="number" name="Number" class="form-control" placeholder="Your Number..." autocomplete="off">
+          <input type="number" name="Number" class="form-control" placeholder="E.g. 8234567890" autocomplete="off">
         </div>
         <div class="mb-4">
-          <input type="email" name="Email" class="form-control" placeholder="Your Email..." autocomplete="off">
+          <input type="email" name="Email" class="form-control" placeholder="E.g. Abc@gmail.com" autocomplete="off">
         </div>
         <div class="mb-4">
           <textarea name="Message" rows="4" cols="50" placeholder="Write a message..." class="form-control" autocomplete="off"></textarea>
