@@ -22,11 +22,96 @@
 }
 body{
     font-family: 'Poppins' , sans-serif;
-    background-color: #0e1525;    
+    background-color: #050505;    
     cursor: none;
     
 }
 
+.wrapper span{
+    position: fixed;
+    bottom: -180px;
+    height: 50px;
+    width: 50px;
+    z-index: -1;
+    background-color: #18191f;
+    box-shadow: 0 0 50px #0072ff,
+                0 0 100px #0072ff,
+                0 0 150px #0072ff,
+                0 0 200px #0072ff;
+    animation: animate 10s linear infinite;
+}
+
+.wrapper span:nth-child(1){
+    left: 60px;
+    animation-delay: 0.6s;
+}
+
+.wrapper span:nth-child(2){
+    left: 10%;
+    animation-delay: 3s;
+    width: 60px;
+    height: 60px;
+}
+
+.wrapper span:nth-child(3){
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.wrapper span:nth-child(4){
+    left: 30%;
+    animation-delay:5s;
+    width: 80px;
+    height: 80px;
+}
+
+.wrapper span:nth-child(5){
+    left: 40%;
+    animation-delay:1s;
+}
+
+.wrapper span:nth-child(6){
+    left: 50%;
+    animation-delay:7s;
+}
+
+.wrapper span:nth-child(7){
+    left: 60%;
+    animation-delay:6s;
+    width: 100px;
+    height: 100px;
+}
+
+.wrapper span:nth-child(8){
+    left: 70%;
+    animation-delay:8s;
+}
+
+.wrapper span:nth-child(9){
+    left: 80%;
+    animation-delay:6s;
+    width: 90px;
+    height: 90px;
+}
+
+.wrapper span:nth-child(10){
+    left: 90%;
+    animation-delay:4s;
+}
+
+@keyframes animate{
+    0%{
+        transform: translate(0);
+        opacity: 1;
+    }
+    80%{
+        opacity: .7;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
 
 .cursor{
     z-index: 999;
@@ -235,7 +320,7 @@ button{
 }
 .header_wrapper .menu-navbar-nav{
     text-align: center;
-    background-color:#020202 ;
+    background-color:#050505 ;
     padding-bottom: 15px;
 }
 .header_wrapper .nav-item .nav-link{
@@ -246,7 +331,7 @@ button{
     width: 100%;
     height: auto;
     min-height: 650px;
-    background-image: url(Background_img.png);    
+    /*background-image: url(Background_img.png);   */ 
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -259,7 +344,7 @@ button{
 /* contact */
 .contact_wrapper .form-control,
 .contact_wrapper textarea{
-    background-color: lightgray;
+    background-color: rgb(248, 238, 238);
     border-color:#c6c9d8bf ;
     color:black;
     font-size: 15px;
@@ -303,4 +388,35 @@ button{
     border-radius: 100%;
     -webkit-transition:all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/*project*/
+.container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 60px;
+}
+
+.container .box-container .box{
+    box-shadow: 0 5px 10px rgba(172, 169, 169, 0.925);
+    border-radius: 20px;
+    background: #232e3f;
+    text-align: center;
+    padding: 30px 10px;
+
+}
+.container .box-container .box img{
+    height: 250px;  
+    width: 300px;
+    padding-bottom: 15px;
+}
+.container .box-container .box:hover{
+    background-color: #994444;
+    background-position: center;
+    box-shadow: 0 5px 10px hsl(59, 96%, 48%);
+    cursor: pointer;
+    
+}
+.container .box-container .box:hover p{
+    color: #fff;
 }
