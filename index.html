@@ -28,45 +28,6 @@
   <span></span>
 </div>
 
-<!--Cursor-->
-<div class="cursor"></div>
-<script type="text/javascript">
-      const cursor = document.querySelector(".cursor");
-      const animatedCursor = document.querySelector(".cursor::before");
-
-  var timeout;
-
-  document.addEventListener("mousemove",(e) => {
-    let x = e.clientX;
-    let y = e.clientY;
-
-    cursor.style.top = y + "px";
-    cursor.style.left = x + "px";
-    cursor.style.display="block";
-
-    animatedCursor.style.top = cursor.style.top;
-  animatedCursor.style.left = cursor.style.left;
-
-    function mouseStopped(){
-      cursor.style.display="none";
-    }
-    clearTimeout(timeout);
-    timeout = setTimeout(mouseStopped,1000);
-  });
-
-    document.addEventListener("mouseout", () => {
-      cursor.style.display= "none";
-      animatedCursor.style.display = "none";
-
-    });
-    setInterval(() => {
-    animatedCursor.style.top = cursor.style.top;
-    animatedCursor.style.left = cursor.style.left;
-  }, 50);
-
-</script>
-
-
 <header class="header_wrapper">
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
@@ -94,9 +55,7 @@
               <li class="nav-item">
                 <a class="nav-link " href="#contact">CONTACT</a>
               </li>
-              <!-- <li class="nav-item  mt-3 mt-lg-0">
-                <a class="main-btn" href="#hire">HIRE ME</a>
-              </li> -->
+              
             </ul>
           </div>
         </div>
@@ -107,130 +66,192 @@
 <section id="home" class="banner_wrapper">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 text-center text-md-start">
-        <h6>"Welcome to my portfolio journey!"</h6>
+      <div class="col-sm-8 text-center text-md-start">
+        <h6>"Hello World!"</h6>
         <h1>I'm Nikita Chaurasia<br><span>Full Stack Java Developer.</span></br>based in India.</h1>
         <div class="mt-4">
           <a class="main-btn" href="https://docs.google.com/document/d/1msTxNP6o04ODeGfIpAt8irPS8G3-oId6fAeFjvyNgKk/edit?usp=sharing">Download CV</a>
-        </div> 
+        </div>    
+      </div>
+      <div class="col-sm-4 text-center text-md-end">
+        <img src="home.png" alt="Your Image Alt Text" class="d-block mx-auto img-fluid">
+      </div>
     </div>
   </div>
 </section>
 <!-- banner exit -->
+
 <!-- about -->
 <section id="about" class="about_wrapper">
   <div class="container">
+    <div class="my-3 mb-lg-0">
+      <span class="subtitle">Know Me More</span>
+      <h1>About Me</h1>
     <div class="row justify-content-between align-items-center">
       <div class="col-lg-5 mb-4 mb-lg-0">
-        <img src="About me.gif" class="img-fluid rounded-3"alt="Nikita's Photo">
+        <img src="img-removebg-preview.png" class="img-fluid rounded-3" alt="Nikita's Photo">
       </div>
       <div class="col-lg-7 ps-lg-5 text-center text-lg-start">
         <div class="my-3 mb-lg-0">
-          <span class="subtitle">Know Who I Am</span>
-          <h1>About Me</h1>
-          <p>
-            "Hi Everyone, I am Nikita Chaurasia from Maharashtra, India. I have completed B.Tech in Electronics & Telecommunication Engineering. I am currently learning Java. My portfolio is a showcase of my coding journey and commitment to continuous learning. I am excited to share my passion for development with you. Let's connect and explore together!"
-          </p>
+          <div class="about-box">
+            <div class="designer-box">
+              <p>
+                "Hey friends! 🌟 I'm Nikita from Maharashtra, India. Survived B.Tech in Electronics & Telecommunication and now on a wild ride with Java! 🚀 My portfolio? When I'm not doing coding stuff, I enjoy making my portfolio look really cool. I like adding fun and creative things when I'm bored. It's like giving my webpage a fancy makeover! 🚀🌈 Join me for some laughs and lots of Java magic! ☕💻✨ Let's code and giggle together! 🎉"
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- about exit -->
 <!-- education -->
 <section id="education" class="education_wrapper">
   <div class="container">
-    <div class="row justify-content-between align-items-center">
-      <div class="col-lg-7 ps-lg-5 text-center text-lg-start">
-        <div class="my-3 mb-lg-0">
-          <span class="subtitle">Discover My Academic Journey</span>
-          <h1>Education</h1>
-          <p>B.Tech in ENTC<span> - Walchand Institute of Technology, Solapur</span></p>
-          <p>Diploma in ENTC<span> - Government Polytechnic Kolhapur, Kolhapur</span></p>
+    <div class="my-3 mb-lg-0">
+      <span class="subtitle">Discover My Academic Journey</span>
+      <h1>Education</h1>
+
+      <div class="row justify-content-between align-items-center">
+      
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <div class="education-box">
+            <h2>B.Tech in ENTC</h2>
+            <p>Walchand Institute of Technology, Solapur</p>
+          </div>
+          <!-- Diploma Box -->
+          <div class="education-box">
+            <h2>Diploma in ENTC</h2>
+            <p>Government Polytechnic Kolhapur, Kolhapur</p>
+          </div>
+        </div> 
+
+        <div class="col-lg-7 ps-lg-5 text-center text-lg-end">
+          <div class="image-container">
+            <img src="Education.gif" class="img-fluid rounded-3" alt="Education_Photo">
+          </div>
         </div>
-      </div>
-      <div class="col-lg-5 mb-4 mb-lg-0">
-        <img src="Education.gif" class="img-fluid rounded-3"alt="Education_Photo">
-      </div>
+
+      </div>  
     </div>
   </div>
 </section>
+
 <!-- education exit -->
+
+
+
+
 <!-- project -->
 <section id="project" class="portfolio_wrapper">
-<div class="container">
-    <div class="row">
-      <div class="col-sm-12 text-center mb-4">
-        <div class="my-3 mb-lg-0">
-          <span class="subtitle">Browse My Recent Project</span>
-          <h1>Project</h1>
-        </div>
+  <div class="container">
+      <div class="row">
+          <div class="my-3 mb-lg-0">
+              <span class="subtitle">Browse My Recent Project</span>
+              <h1>Project</h1>
+          </div>
 
-<div class="box-container">
-  <div class="box">
-    <img src="Amazon img.jpg" alt="">
-    <h3>AMAZON-WEBSITE-CLONE</h3>
-    <p>A simple Amazon clone created using HTML & CSS. This project is to showcase the layout and design of an online shopping platform.</p>
-    <a href="https://nikita11ch.github.io/AMAZON-CLONE-SHOP-SIMPLICITY/" class="main-btn">View Live</a>
+          <div class="box-container">
+              <div class="box">
+                  <div class="box-content">
+                      <img src="Amazon img.jpg" alt="">
+                      <h3>Amazon Website Clone</h3>
+                      <div class="buttons">
+                          <a href="https://nikita11ch.github.io/AMAZON-CLONE-SHOP-SIMPLICITY/" class="main-btn">View Live</a>
+                          <a href="#" class="main-btn">Demo</a>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="box-container">
+                <div class="box">
+                    <div class="box-content">
+                        <img src="spotify.png" alt="">
+                        <h3>Spotify Website Clone</h3>
+                        <div class="buttons">
+                            <a href="https://nikita11ch.github.io/Spotify_Clone/" class="main-btn">View Live</a>
+                            <a href="#" class="main-btn">Demo</a>
+                        </div>
+                    </div>
+                </div>
+    
+
+                <div class="box-container">
+                  <div class="box">
+                      <div class="box-content">
+                          <img src="tic tac toe.jpg" alt="">
+                          <h3>Tic-Tac-Toe Game</h3>
+                          <div class="buttons">
+                            <a href="https://nikita11ch.github.io/Tic-Tac-Toe-Game/" class="main-btn">View Live</a>
+                            <a href="#" class="main-btn">Demo</a>
+                          </div>
+                      </div>
+                  </div>
+    
+                  <div class="box-container">
+                    <div class="box">
+                        <div class="box-content">
+                            <img src="emp.png" alt="">
+                            <h3>Employee Management System</h3>
+                            <div class="buttons">
+                              <a href="https://nikita11ch.github.io/EMPLOYEE-MANAGEMENT-SYSTEM/" class="main-btn">Read More</a>
+                              <a href="#" class="main-btn">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+          </div>
+      </div>
   </div>
-
-    <div class="box">
-      <img src="emp.png" alt="">
-      <h3>EMPLOYEE-MANAGEMENT-SYSTEM</h3>
-      <p>An employee management system in C using file handling that efficiently stores and retrieves employee information.</p>
-      <a href="https://nikita11ch.github.io/EMPLOYEE-MANAGEMENT-SYSTEM/" class="main-btn">Read More</a>
-    </div>
-
-    <div class="box">
-        <img src="tic tac toe.jpg" alt="">
-        <h3>TIC-TAC-TOE GAME</h3>
-        <p>A classic implementation of the Tic Tac Toe game using HTML, CSS and JS. Challenge a friend and take turns to make your moves. Have fun playing! </p>
-        <a href="https://nikita11ch.github.io/Tic-Tac-Toe-Game/" class="main-btn">View Live</a>
-    </div>
-</div>    
-</div>
-</div>
-</div>
 </section>
-<!-- project exit -->
+
+<!-- project exit --> 
 <!-- contact  -->
+
 <section id="contact" class="contact_wrapper">
   <div class="container">
     <div class="row justify-content-between align-items-center">
-      <div class="my-3 mb-lg-0" style="text-align: center;">
-        <span class="subtitle">Get In Touch</span>
+      <div class="my-3 mb-lg-0">
+        <span class="subtitle">Get in Touch</span>
         <h1>Contact</h1>
       </div>
-      <div class="col-lg-6 order-2 order-lg-1 pe-lg-5 text-lg-start text-center" >
+      <div class="col-lg-6 order-2 order-lg-1 pe-lg-5 text-lg-start text-center">
+        <!-- Your image goes here -->
+        <img src="Contact.png" class="img-fluid">
+      </div>
+      <div class="col-lg-6 order-1 mb-4 order-lg-1 mb-lg-0 designer-box">
+        <div class="my-3 mb-lg-0" style="text-align: start;">
+          <!-- Removed span and h1 from here -->
+        </div>
         <div class="row call_details mb-4">
-        <label class="col-sm-3 col-lg-4">Contact Email:</label>
-        <div class="col-sm-9 col-lg-8 mb-lg-2 text-md-start">
-          <a href="mailto:nikitachaurasia755@gmail.com">nikitachaurasia755@gmail.com</a>
+          <label class="col-sm-3 col-lg-4">Contact Email:</label>
+          <div class="col-sm-9 col-lg-8 mb-lg-2 text-md-start">
+            <a href="mailto:nikitachaurasia755@gmail.com">nikitachaurasia755@gmail.com</a>
+          </div>
         </div>
-      </div>
-      <form action="" name="contactform">
-        <div class="mb-4">
-          <input type="text" name="Name" class="form-control" placeholder="E.g. Nikita Chaurasia" autocomplete="off">
-        </div>
-        <div class="mb-4">
-          <input type="number" name="Number" class="form-control" placeholder="E.g. 8234567890" autocomplete="off">
-        </div>
-        <div class="mb-4">
-          <input type="email" name="Email" class="form-control" placeholder="E.g. Abc@gmail.com" autocomplete="off">
-        </div>
-        <div class="mb-4">
-          <textarea name="Message" rows="4" cols="50" placeholder="Write a message..." class="form-control" autocomplete="off"></textarea>
-        </div>
-        <button type="submit" class="main-btn">Submit</button>
-      <!-- <input type="submit" value="send message" class="button btn-primary" id="submit"> -->
-      </form>
-      </div>
-      <div class="col-lg-6 order-1 mb-4 order-lg-1 mb-lg-0 ">
-        <img src="Contact.gif"  class="img-fluid">
+        <form action="" name="contactform">
+          <div class="mb-4">
+            <input type="text" name="Name" class="form-control" placeholder="E.g. Nikita Chaurasia" autocomplete="off">
+          </div>
+          <div class="mb-4">
+            <input type="number" name="Number" class="form-control" placeholder="E.g. 8234567890" autocomplete="off">
+          </div>
+          <div class="mb-4">
+            <input type="email" name="Email" class="form-control" placeholder="E.g. Abc@gmail.com" autocomplete="off">
+          </div>
+          <div class="mb-4">
+            <textarea name="Message" rows="4" cols="50" placeholder="Write a message..." class="form-control" autocomplete="off"></textarea>
+          </div>
+          <button type="submit" class="main-btn">Submit</button>
+        </form>
       </div>
     </div>
   </div>
 </section>
+
+
 <!-- contact exit -->
 <!-- footer -->
 <section id="footer" class="footer_wrapper mt-3 mt-md-0">
@@ -259,11 +280,6 @@
     </div>
   </div>
 </section>
-
-
-
-
-
 
 <!-- Your HTML content above -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
